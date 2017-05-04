@@ -1,0 +1,60 @@
+.space
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: flex-start    
+    &__advertising
+        background: url('../img/bg-1.png')
+        color: #fff
+        padding: 80px 80px 0 85px
+        max-width: 960px
+        flex-grow: 1
+        h2
+            font-family: 'Montserrat', sans-serif
+            font-size: 32px
+            font-weight: 900
+            text-transform: uppercase
+        p
+            font-family: 'Roboto', sans-serif
+            font-size: 16px
+            font-weight: 400
+            padding-top: 30px
+            line-height: 1.8
+    &__list
+        font-family: 'Roboto', sans-serif
+        font-size: 16px
+        font-weight: 400
+    &__item
+        padding-bottom: 10px
+    &__item:before
+            position: relative
+            content: url('../img/check.png')
+            padding-right: 20px
+            padding-left: 5px
+            top: 12px
+    &__sell
+        display: flex
+        img
+            flex-shrink: 3
+    &__place
+        display: flex
+        img
+            flex-shrink: 3
+    
+.space__sell>div
+    margin-top: 25px
+.space__place>div
+    margin-bottom: 25px
+
+@media only screen and (max-width: 1600px)
+    .space
+        align-items: center
+        &__sell
+            flex-direction: column
+            justify-content: center
+            align-items: center
+        &__place
+            flex-direction: column
+        &__advertising
+            padding: 70px
+        

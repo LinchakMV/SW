@@ -1,0 +1,112 @@
+---
+title: space wolff
+items:
+ - img: ./img/easy.png
+   title: Easy to Use
+   summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
+ - img: ./img/save.png
+   title: Save Your Time
+   summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
+ - img: ./img/effective.png
+   title: Effective
+   summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
+works: [{
+	img: ./img/create.png,
+ 	title: Create an Account,
+	summary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut dolore magna aliqua.'
+},{
+	img: ./img/location.png,
+ 	title: Search For Ad Space,
+	summary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut dolore magna aliqua.'
+},{
+	img: ./img/apply.png,
+ 	title: Apply For Ad Space,
+	summary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut dolore magna aliqua.'
+},{
+	img: ./img/placed.png,
+ 	title: Your Ad Is Placed,
+	summary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut dolore magna aliqua.'
+}]
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	
+	<!--{# variable example #}-->
+	<!--<h1>{{title}}</h1>-->
+
+	
+	{# partial example #}
+	{% include "partials/_header.html" %}
+
+	{% include "partials/_main.html" %}
+	{% include "partials/_space.html" %}
+	<div class="how">
+		<h2>How it works</h2>
+		<p class="how__our">Our marketplace connects adverisers and sellers</br> of ad space directly.</p>
+		<div class="how__block">
+		{% for item in works %}
+			<div class="how__work">
+				<div class="how__pic">
+					<a href="#"><img src="{{item.img}}" alt=""></a>
+				</div>
+				<h3 class="how__title"><a href="#">{{item.title}}</a></h3>
+				<p class="how__subtitle">{{item.summary}}</p>
+			</div>
+		{% endfor %}
+		</div>
+	</div>
+
+	<div class="advertise">
+		<div class="advertise__list">
+			<h2>Advertise with spacewolff</h2>
+			<p>Put your adon spacewolff's homepage, in spacewolff's emails, and on spacewolff'sblog.</p>
+			<button>view our listings</button>
+		</div>
+	</div>
+
+	<div class="footer">
+		<div class="footer__content">
+			<div class="about">
+				<h5>About us</h5>
+				<p>Spacewolff is an online marketplace connecting advertisers and owners of ad space. Small and large businesses, individuals, publishers, and content creators can create and sell space across multiple channels. Advertisers and can easily search and sort ad space to identify channels that reach their specific target market and place ads directly through the site. Spacewolff was founded in 2016 and is based in Miami, Florida.</p>
+			</div>
+			<div class="link">
+				<h5>Spacewolff</h5>
+				<p><a href="#">Marketplace</a></p>
+				<p><a href="#">About Company</a></p>
+				<p><a href="#">FAQs</a></p>
+				<p><a href="#">Blog</a></p>
+				<p><a href="#">Contact</a></p>
+			</div>
+			<div class="legal">
+				<h5>Legal</h5>
+				<p><a href="#">Privacy Policy</a></p>
+				<p><a href="#">Terms of Use</a></p>
+				<p><a href="#">Payment and Refund</a></p>
+				<p><a href="#">Policy</a></p>
+			</div>
+			<div class="follow">
+				<h5>Follow us</h5>
+				<a href="#"><img src="./img/facebook-5-32.png" alt="fb"></a>
+				<a href="#"><img src="./img/twitter-5-32.png" alt="twitter"></a>
+				<a href="#"><img src="./img/instagram-5-32.png" alt="instagram"></a>
+			</div>
+		</div>
+		<div class="footer__copyright">
+			<p>© 2017 Copyright - Spacewolff, LLC.</p>
+		</div>
+	</div>
+	<!--{# mixin example #}
+	{{mixins.icon('facebook')}}-->
+
+
+	<!--{# data usage example #}
+		{% import "data/data.html" as tests %}
+		
+		{% for test in tests.list %}
+		<li>{{test.title}}</li>
+		{% endfor %}
+	{# end of example #}-->
+
+{% endblock %}

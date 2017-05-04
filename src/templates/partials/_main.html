@@ -1,0 +1,25 @@
+<div class="main">
+    <h2 class="main__h">Why spacewolff</h2>
+    <div class="main__block">
+        {% for why in items %}
+        <div class="why">
+            <div class="why__pic">
+                <a href="#"><img src="{{why.img}}" alt=""></a>
+            </div>
+            <h2 class="why__title"><a href="#">{{why.title}}</a></h2>
+            <p class="why__subtitle">{{why.summary}}</p>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="simple">
+        <h2 class="simple__make">WE MAKE ADVERTISING SIMPLE</h2>
+        <div class="simple__view">
+            <img src="./img/view.png" alt="browser">
+            <div class="find">
+                <p class="find__site">Find at space that reaches your targeted audience and place ads directly through the site. Monetize your space by selling it to the advertisers on the site.</p>
+                <p class="find__user">View your user dashboard to see how much you've earned and how you've spent.</p>
+                <button class="started">GET STARTED</button>
+            </div>
+        </div>
+    </div>
+</div>
