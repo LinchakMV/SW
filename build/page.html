@@ -17,6 +17,11 @@
       <!---->
       <!--<h1>space wolff</h1>-->
       <div class="header">
+        <div class="slider" style="position: absolute; z-index:-1">
+          <div class="slide"><img src="../img/slide.jpg" alt=""></div>
+          <div class="slide"><img src="../img/slide.jpg" alt=""></div>
+          <div class="slide"><img src="../img/slide.jpg" alt=""></div>
+        </div>
         <div class="header__main">
           <div class="logo"> <img src="./img/logo.png" alt="spacewolff"> </div>
           <div class="nav">
@@ -35,8 +40,8 @@
           <h1>crowdsourced ad space</h1>
           <p>A peer-to-peer advertising platform</p> <button class="selling">start selling, now</button> </div>
         <div class="header__slide">
-          <div class="header__next"><img src="./img/left.png" alt="left"></div>
-          <div class="header__prev"><img src="./img/right.png" alt="right"></div>
+          <div class="header__prev"><img src="./img/left.png" alt="left"></div>
+          <div class="header__next"><img src="./img/right.png" alt="right"></div>
         </div>
         <div class="header__scroll">
           <a href="#"><img src="./img/scroll.png" alt="scroll"></a>
@@ -193,6 +198,23 @@
     <!-- END content -->
     <!-- BEGIN scripts -->
     <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+    <script>
+      $(document).ready(function()
+      {
+        $('.slider').slick(
+        {
+          infinite: true,
+          autoplay: true,
+          speed: 700,
+          slidesToShow: 1,
+          arrows: true,
+          dots: false
+        });
+      });
+
+    </script>
     <!-- END scripts -->
   </body>
 
