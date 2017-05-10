@@ -18,10 +18,18 @@
       <!--<h1>space wolff</h1>-->
       <div class="header">
         <div class="slider" style="position: absolute; z-index:-1">
-          <div class="slide"><img src="../img/slide.jpg" alt=""></div>
-          <div class="slide"><img src="../img/slide.jpg" alt=""></div>
-          <div class="slide"><img src="../img/slide.jpg" alt=""></div>
-        </div>
+          <!--<div class="slide"><img src="../img/slide.jpg" alt=""></div>
+        <div class="slide"><img src="../img/slide.jpg" alt=""></div>
+        <div class="slide"><img src="../img/slide.jpg" alt=""></div>-->
+          <ul>
+            <li><img src="../img/slide.jpg" alt=""></li>
+            <li><img src="../img/slide.jpg" alt=""></li>
+            <li><img src="../img/slide.jpg" alt=""></li>
+          </ul>
+          <!--<div class="navigation-slide">
+                <a href="#" id="prev"><i class="fa fa-angle-left fa-2x" aria-hidden="true"></i></a>
+                <a href="#" id="next"><i class="fa fa-angle-right fa-2x" aria-hidden="true"></i></a>
+        </div> --></div>
         <div class="header__main">
           <div class="logo"> <img src="./img/logo.png" alt="spacewolff"> </div>
           <div class="nav">
@@ -40,8 +48,8 @@
           <h1>crowdsourced ad space</h1>
           <p>A peer-to-peer advertising platform</p> <button class="selling">start selling, now</button> </div>
         <div class="header__slide">
-          <div class="header__prev"><img src="./img/left.png" alt="left"></div>
-          <div class="header__next"><img src="./img/right.png" alt="right"></div>
+          <div class="header__prev" id="prev"><img src="./img/left.png" alt="left"></div>
+          <div class="header__next" id="next"><img src="./img/right.png" alt="right"></div>
         </div>
         <div class="header__scroll">
           <a href="#"><img src="./img/scroll.png" alt="scroll"></a>
@@ -92,10 +100,7 @@
               <li class="space__item">Suspendisse pharetra elit ut neque viverra condimentum.</li>
               <li class="space__item">Cras nec lorem a nisl auctor sodales sed sed quam posuere semper.</li>
             </ul>
-          </div>
-          <!--<div class="img">--><img src="./img/space1.jpg" alt="Make money by selling ad space">
-          <!--</div>-->
-        </div>
+          </div> <img src="./img/space1.jpg" alt="Make money by selling ad space"> </div>
         <div class="space__place"> <img src="./img/space2.jpg" alt="This could be your ad">
           <div class="space__advertising">
             <h2>Place ads directly through spacewolff</h2>
@@ -197,24 +202,8 @@
     </div>
     <!-- END content -->
     <!-- BEGIN scripts -->
-    <script type="text/javascript" src="js/app.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
-    <script>
-      $(document).ready(function()
-      {
-        $('.slider').slick(
-        {
-          infinite: true,
-          autoplay: true,
-          speed: 700,
-          slidesToShow: 1,
-          arrows: true,
-          dots: false
-        });
-      });
-
-    </script>
+    <script type="text/javascript" src="js/app.js"></script>
     <!-- END scripts -->
   </body>
 
