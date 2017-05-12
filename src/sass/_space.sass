@@ -10,20 +10,14 @@
         max-width: 960px
         flex-grow: 1
         h2
-            font-family: 'Montserrat', sans-serif
-            font-size: 32px
-            font-weight: 900
+            @include font('Montserrat', 900, 32px)
             text-transform: uppercase
         p
-            font-family: 'Roboto', sans-serif
-            font-size: 16px
-            font-weight: 400
+            @include font('Roboto', 400, 16px)
             padding-top: 30px
             line-height: 1.8
     &__list
-        font-family: 'Roboto', sans-serif
-        font-size: 16px
-        font-weight: 400
+        @include font('Roboto', 400, 16px)
     &__item
         padding-bottom: 10px
     &__item:before

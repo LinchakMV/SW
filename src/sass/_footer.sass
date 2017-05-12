@@ -14,15 +14,11 @@
         padding-bottom: 35px
         border-bottom: 1px solid #f3f3f3
         h5
-            font-family: 'Montserrat', sans-serif
-            font-size: 15px
-            font-weight: 700
+            @include font('Montserrat', 700, 15px)
             text-transform: uppercase
             padding-bottom: 10px
         p
-            font-family: 'Roboto', sans-serif
-            font-weight: 400
-            font-size: 14px
+            @include font('Roboto', 400, 14px)
             color: #737171
             max-width: 472px
             line-height: 1.8
@@ -30,33 +26,50 @@
                 text-decoration: none
                 color: #737171
                 
-.link
-    padding-left: 80px
-.legal
-    padding-left: 80px
-.follow
-    padding: 0 55px 0 115px
-    h5
-        padding-bottom: 0px
-
-.footer__copyright
-    padding: 28px 0
-    font-family: 'Roboto', sans-serif
-    font-weight: 400
-    font-size: 14px
-    color: #999999
+.footer
+    &__link
+        padding-left: 80px
+    &__legal
+        padding-left: 80px
+    &__follow
+        padding: 0 55px 0 115px
+        h5
+            padding-bottom: 0px
+    &__copyright
+        padding: 28px 0
+        @include font('Roboto', 400, 14px)
+        color: #999999
 
 @media only screen and (max-width: 1600px)
     .footer
         &__content
             align-items: flex-start
+        &__about
+            padding-left: 50px
     .link, .legal, .follow
         padding-left: 40px
-    .about
-        padding-left: 50px
+           
 
 @media only screen and (max-width: 1024px)
     .follow
         display: inline
         text-align: center
         padding: 0 70px 0 10px
+
+@media only screen and (max-width: 900px)
+    .footer
+        &__content
+            flex-direction: column
+            justify-content: center
+            align-items: flex-start
+        &__about
+            margin-bottom: 50px
+        &__link
+            margin-bottom: 50px
+            padding-left: 50px
+        &__legal
+            margin-bottom: 50px
+            padding-left: 50px
+        &__follow
+            padding-left: 50px
+
