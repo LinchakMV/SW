@@ -83,7 +83,7 @@
 .navigation__item:hover
     border: 1px solid #fff
     border-radius: 35px
-@media only screen and (max-width: 1600px)
++r(1600)
     .header__main
         justify-content: flex-start
     .logo
@@ -97,10 +97,10 @@
             margin-left: 0px
         &__slide
             margin: 68px 150px 0 0
-@media only screen and (max-width: 1250px)
++r(1250)
     .navigation
         padding-left: 150px
-@media only screen and (max-width: 1024px)
++r(1024)
     .header__sell
         margin-left: 100px
     .navigation:before
@@ -130,10 +130,12 @@
     .header__slide
         margin-right: 150px
 
-@media only screen and (max-width: 900px)
++r(900)
     .navigation
         right: 100px
-@media only screen and (max-width: 775px)
++r(775)
+    .logo
+        margin-left: 120px
     .navigation
         left: 30px
         top: 150px
@@ -149,4 +151,18 @@
         border-radius: 30px
     .navigation:before
         font-size: 4em
-
+        margin-left: -120px
+    .header__sell
+        margin-left: 120px
++r(720)
+    .logo
+        margin-left: 160px
+    .header__sell
+        margin-left: 160px
++r(675)
+    body
+        align-items: flex-start
+    .logo, .header__sell
+        margin-left: 20px
+    .navigation
+        margin-left: -20px
